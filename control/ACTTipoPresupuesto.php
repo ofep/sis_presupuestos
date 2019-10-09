@@ -15,7 +15,7 @@ class ACTTipoPresupuesto extends ACTbase{
 		$this->objParam->defecto('dir_ordenacion','asc');
 		
 		
-		if($this->objParam->getParametro('mov_pres')!=''){
+		if($this->objParam->getParametro('mov_pres')!=''){ 
 			
 			if($this->objParam->getParametro('mov_pres') =='{ingreso,egreso}' || $this->objParam->getParametro('mov_pres') =='{egreso,ingreso}'){
 				$this->objParam->addFiltro("tipr.movimiento in (''ingreso_egreso'', ''administrativo'')");	

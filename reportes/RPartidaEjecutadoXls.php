@@ -65,17 +65,15 @@ class RPartidaEjecutadoXls
 
     }
     function datosHeader ( $detalle,$totales,$total,$institucional) {
-
         $this->datos_detalle = $detalle;
         $this->datos_titulo = $totales;
-       $this->datos_total = $total;
+        $this->datos_total = $total;
         $this->datos_institucional = $institucional;
     }
     function imprimeCabecera($shit,$tipo) {
         $this->docexcel->createSheet($shit);
         $this->docexcel->setActiveSheetIndex($shit);
-        $this->docexcel->getActiveSheet()->setTitle($tipo);
-
+        $this->docexcel->getActiveSheet()->setTitle('Hoja');
         $styleTitulos1 = array(
             'font'  => array(
                 'bold'  => true,
@@ -145,7 +143,6 @@ class RPartidaEjecutadoXls
                         ),
                     )
                 );
-
                 $styleEjecucionProgramado= array(
                     'font' => array(
                         'bold' => true,
@@ -305,6 +302,7 @@ class RPartidaEjecutadoXls
                 ),
             )
         );
+
         $styleAcumuladoComp= array(
             'font' => array(
                 'bold' => true,
@@ -1783,7 +1781,6 @@ class RPartidaEjecutadoXls
         $this->docexcel->getActiveSheet()->mergeCells('DL5:DU5');
         $this->docexcel->getActiveSheet()->getStyle('DL5:DU5')->applyFromArray($stylePeriodo);
         $this->docexcel->getActiveSheet(0)->freezePaneByColumnAndRow(6,7);// inmovilizar paneles
-
     }
     function generarDatos()
     {

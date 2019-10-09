@@ -111,11 +111,11 @@ BEGIN
 
              ELSEIF v_parametros.tipo_reporte = 'presupuesto' and v_parametros.id_presupuesto is not null and v_parametros.id_presupuesto != 0 THEN
 
-                   va_id_presupuesto[1] = v_parametros.id_presupuesto;   
-             ELSEIF v_parametros.tipo_reporte = 'tipo_cc' and v_parametros.id_tipo_cc is not null and v_parametros.id_tipo_cc != 0 THEN
+                   va_id_presupuesto[1] = v_parametros.id_presupuesto;
+             --ELSEIF v_parametros.tipo_reporte = 'tipo_cc' and v_parametros.id_tipo_cc is not null and v_parametros.id_tipo_cc != 0 THEN
                  --raise exception 'error provocado %',v_parametros.id_tipo_cc;
-               
-                             
+
+
              ELSE
 
                    SELECT
