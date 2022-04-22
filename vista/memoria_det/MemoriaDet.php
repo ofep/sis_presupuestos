@@ -455,7 +455,8 @@ Phx.vista.MemoriaDet=Ext.extend(Phx.gridInterfaz,{
     iniciarEventos:function(){
     	this.grid.on('afteredit',function(e){
 			 e.record.set( 'cantidad_mem', parseInt(e.record.data.cantidad_mem));
-			 e.record.set( 'importe_unitario', parseInt(e.record.data.importe_unitario));
+			 //e.record.set( 'importe_unitario', parseInt(e.record.data.importe_unitario));
+			 e.record.set( 'importe_unitario', parseFloat(e.record.data.importe_unitario));
     		 this.calculaTotal(e);
     	}, this);
     	
